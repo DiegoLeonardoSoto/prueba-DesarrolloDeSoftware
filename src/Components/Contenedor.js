@@ -28,12 +28,9 @@ function Contenedor() {
 
         <div className="grid grid-cols-4 gap-4 w-[60%] h-[70%] mt-[8rem] overflow-auto">
             {
+             /* A function that is mapping the array of objects that is in the context. */
               numero.map((n) => {return <Sumatoria key={n['id']} id_nombre={`id_${n['id']}`}   id_numero_bd={`span_bd__${n['id']}`} id_resultado={`span_resultado__${n['id']}`} bd_numero ={n["valor"]}/>} )
             }
-            {/* "id_`${n['id']}`" */}
-            {/* <Sumatoria id_nombre="id_1" id_numero_bd="span_bd_1" id_resultado="span_resultado_1" bd_numero ={4}/>
-            <Sumatoria id_nombre="id_2" id_numero_bd="span_bd_2" id_resultado="span_resultado_2" bd_numero={3}/>
-            <Sumatoria id_nombre="id_3" id_numero_bd="span_bd_3" id_resultado="span_resultado_3" bd_numero={5}/> */}
         </div>
 
         <div className='absolute bottom-5 right-12'>

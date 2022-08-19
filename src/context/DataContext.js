@@ -10,26 +10,13 @@ export const Dataprovider = ({children}) => {
 
     const API_URL = "http://localhost/desarrolloBackEnd/public/api/numeros";
 
+/* A hook that is called when the component is mounted. */
     useEffect(() => {
         axios.get(`${API_URL}`)
         .then(res=> {
             setNumero(res.data);
         })
     }, []);
-
-    // const fetchNumeros = async() =>{
-    //     const {numeros} = await axios.get(`${API_URL}`,{
-    //         params:{
-
-    //     }
-    //     })
-    //     console.log(numeros);
-    //     return numeros
-    // }
-
-    // const datos = fetchNumeros();
-    // setNumero(datos)
-    //------------
 
     return(
         <DataContext.Provider value={{
